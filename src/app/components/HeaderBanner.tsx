@@ -7,12 +7,7 @@ const HeaderBanner = () => {
         <h1 className="text-7xl">
           Hello 👋 my name <br /> is <Highlight>Ushair Ansari</Highlight>
         </h1>
-        <p className="w-4/5 text-2xl">
-          I am a passionate and dedicated full stack developer. With a strong
-          foundation in both front-end and back-end technologies, I bring a
-          holistic approach to building innovative and efficient web
-          applications.
-        </p>
+        <p className="w-4/5 text-2xl">I am a full stack developer.</p>
       </div>
     </div>
   );
