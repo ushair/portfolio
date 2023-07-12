@@ -18,10 +18,17 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgba(14, 17, 21, 1);
+}
+
+.textFill--transparent {
+  -webkit-text-fill-color: transparent;
+}
+
+.header {
+  min-height: calc(100vh - 50px);
+}
+.header-background {
+    clip-path: url(#my-clip-path);
+    filter:blur(100px);
 }
