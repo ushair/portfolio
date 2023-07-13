@@ -7,7 +7,10 @@ const HeaderBanner = () => {
         <h1 className="text-7xl">
           Hello 👋 my name <br /> is <Highlight>Ushair Ansari</Highlight>
         </h1>
-        <p className="w-4/5 text-2xl">I am a full stack developer.</p>
+        <p className="w-4/5 text-2xl">
+          I am a full stack developer. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+        </p>
       </div>
     </div>
   );

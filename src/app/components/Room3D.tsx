@@ -6,10 +6,10 @@ export default function Room3D() {
   };
   return (
     <div className="h-[31.25rem] w-full">
-      <Spline
+      {/* <Spline
         onLoad={onLoad}
         scene="https://prod.spline.design/ncnBODkFyKlo6ZK6/scene.splinecode"
-      />
+      /> */}
     </div>
   );
 }
