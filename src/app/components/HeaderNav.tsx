@@ -5,8 +5,8 @@ import React from "react";
 
 const HeaderNav: React.FC = () => {
   return (
-    <div className="flex items-center">
-      <div className="w-[100px] h-[60px]">
+    <div className="flex items-center pl-5">
+      <div className="h-16 w-28">
         <Canvas camera={{ position: [-0.3, 0, 3] }} shadows>
           <ambientLight intensity={0.7} />
           <directionalLight
@@ -17,16 +17,16 @@ const HeaderNav: React.FC = () => {
           <Center>
             <Text3D
               font={font as unknown as FontData}
-              scale={2}
+              scale={1.4}
               rotation={[0, -0.3, 0]}
             >
-              UA
+              USHAIR
               <meshStandardMaterial color="#B2B2B2" />
             </Text3D>
           </Center>
         </Canvas>
       </div>
-      <div className="flex gap-6 text-lg">
+      <div className="flex gap-6 ml-12 text-lg">
         <a>About</a>
         <a>Skills</a>
         <a>Experiences</a>
