@@ -7,7 +7,7 @@ import HeaderBg from "./HeaderBg";
 
 const Header: React.FC = () => {
   return (
-    <header className="relative header">
+    <header className="relative flex flex-col header">
       <HeaderBg />
       <HeaderNav />
       <HeaderBanner />
