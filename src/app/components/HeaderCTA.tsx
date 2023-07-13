@@ -1,5 +1,5 @@
 import Image from "next/image";
-import arrowIcon from "../../../public/arrow-circle-right.svg";
+import arrowIcon from "@public/arrow-circle-right.svg";
 
 const HeaderCTA = () => {
   return (
