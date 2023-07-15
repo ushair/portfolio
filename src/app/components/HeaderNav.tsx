@@ -1,6 +1,6 @@
 import { Center, Text3D, FontData } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import font from "../lib/fonts/Gilroy_ExtraBold_Regular.json";
+import font from "../lib/fonts/Windsong.json";
 import React from "react";
 
 const HeaderNav: React.FC = () => {
@@ -17,11 +17,11 @@ const HeaderNav: React.FC = () => {
           <Center>
             <Text3D
               font={font as unknown as FontData}
-              scale={1.4}
-              rotation={[0, -0.3, 0]}
+              scale={2.5}
+              rotation={[0, 0, 0.1]}
             >
-              USHAIR
-              <meshStandardMaterial color="#B2B2B2" />
+              Ushair
+              <meshStandardMaterial color="#93faba" />
             </Text3D>
           </Center>
         </Canvas>

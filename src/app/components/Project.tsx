@@ -6,7 +6,7 @@ type Props = {};
 
 const Project = (props: Props) => {
   return (
-    <div className="group min-w-[30rem] p-8 border bg-[#404040] bg-opacity-10 border-green-500 border-opacity-10 rounded-2xl">
+    <div className="group min-w-[30rem] p-8 border bg-[#404040] bg-opacity-10 border-green-500 border-opacity-10 rounded-2xl mb-2">
       <p className="text-sm font-semibold text-blue-500 uppercase">
         Featured Project
       </p>
