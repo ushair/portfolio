@@ -1,4 +1,5 @@
 import Bio from "./components/Bio";
+import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
@@ -10,6 +11,7 @@ export default function Home() {
       <Bio />
       <Experience />
       <Projects />
+      <Contact />
     </main>
   );
 }
