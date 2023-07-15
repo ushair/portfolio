@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
-
-type Props = {};
+import Highlight from "./Highlight";
+import Image from "next/image";
+import emailjs from "@emailjs/browser";
+import arrowIcon from "@public/arrow-circle-right-gradient.svg";
 
 const Interests: { [x: string]: string } = {
   webDevelopment: "Web Development",
@@ -9,14 +11,31 @@ const Interests: { [x: string]: string } = {
   app: "App from Scratch",
   teach: "Teaching",
 };
-const Contact = (props: Props) => {
+const Contact = () => {
   const [active, setActive] = useState(Interests.webDevelopment);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const selected =
     "bg-gradient-to-r from-blueOne via-blueTwo to-blueThree text-black";
   const handleClick = (interest: string) => {
     setActive(interest);
   };
-
+  const sendEmail = () => {
+    emailjs.send(
+      "service_3txf7fc",
+      "template_9wiaovn",
+      {
+        name: formData.name,
+        message: formData.message,
+        reply_to: formData.email,
+        interest: active,
+      },
+      "7H27yf9ZXFWwvau6c"
+    );
+  };
   return (
     <div className="ml-20 mt-28">
       <h1 className="text-6xl">Let&#39;s get in Touch!</h1>
@@ -36,6 +55,43 @@ const Contact = (props: Props) => {
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col gap-6 mt-5 form-container">
+        <input
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
+          type="text"
+          placeholder="Enter Your Name"
+          value={formData.name}
+        />
+        <input
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+          className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
+          type="email"
+          placeholder="Enter Your Email"
+          value={formData.email}
+        />
+        <input
+          onChange={(e) =>
+            setFormData({ ...formData, message: e.target.value })
+          }
+          className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
+          type="text"
+          placeholder="Tell Me About Your Project"
+          value={formData.message}
+        />
+        <div className="flex">
+          <button
+            type="button"
+            onClick={sendEmail}
+            className="p-0.5 bg-gradient-to-r from-blueOne via-blueTwo to-blueThree rounded-3xl"
+          >
+            <div className="flex items-center justify-center gap-1 px-12 py-6 bg-slate-900 rounded-3xl">
+              <Highlight className="text-xl">Submit</Highlight>
+              <Image src={arrowIcon} alt="" />
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );
