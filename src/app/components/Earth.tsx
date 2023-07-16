@@ -1,8 +1,9 @@
+//@ts-nocheck
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import Globe, { GlobeMethods } from "react-globe.gl";
 import { useWindowSize } from "usehooks-ts";
-
+let Globe = () => null;
+if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
 type LocationType = {
   lat: number;
   lng: number;
@@ -13,7 +14,7 @@ const Location: LocationType = {
 };
 
 const Earth = () => {
-  const ref = useRef<GlobeMethods>();
+  const ref = useRef();
   const [mapPointer] = useState(`
     <svg
       fill="#11e8bd"
