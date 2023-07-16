@@ -8,7 +8,7 @@ type Props = {};
 
 const Skills = (props: Props) => {
   return (
-    <div className="w-full mb-40">
+    <div className="w-full">
       <div className="container h-[900px]">
         <Canvas camera={{ position: [0, 0, 7] }} shadows>
           <Suspense fallback={null}>
