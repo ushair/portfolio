@@ -67,7 +67,7 @@ const Earth = () => {
         backgroundColor="#0E1115"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
         htmlElementsData={[Location]}
-        htmlElement={(d: LocationType) => {
+        htmlElement={(d: any) => {
           const el: HTMLElement = document.createElement("div");
           el.innerHTML = mapPointer;
           el.style["pointerEvents"] = "auto";
