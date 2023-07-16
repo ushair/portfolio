@@ -5,7 +5,7 @@ type Props = {};
 
 const Projects = (props: Props) => {
   return (
-    <div className="w-full">
+    <div className="w-full mt-36">
       <div className="container ml-20 mt-28">
         <h1 className="text-6xl">Projects</h1>
         {/* container */}
