@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Globe, { GlobeMethods } from "react-globe.gl";
-import { useWindowSize } from "@uidotdev/usehooks";
+import { useWindowSize } from "usehooks-ts";
 
 type LocationType = {
   lat: number;
@@ -46,7 +46,6 @@ const Earth = () => {
       </g>
     </svg>`);
   const size = useWindowSize();
-  console.log("🚀 ~ Earth ~ size:", size);
 
   useEffect(() => {
     if (ref.current) {
