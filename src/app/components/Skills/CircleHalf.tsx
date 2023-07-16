@@ -25,7 +25,7 @@ const CircleHalf: React.FC<Props> = ({
   position,
   dashed = false,
 }) => {
-  const lineRef = useRef<THREE.Line>(null);
+  const lineRef = useRef<any>(null);
   const points = useMemo(() => {
     const curve = new THREE.CubicBezierCurve(
       new THREE.Vector2(-bezierPoints.x, 0),
@@ -46,14 +46,16 @@ const CircleHalf: React.FC<Props> = ({
     }
   }, [points, dashed]);
   return (
-    <line ref={lineRef} position={position}>
-      <bufferGeometry />
-      {dashed ? (
-        <lineDashedMaterial {...lineStyle} />
-      ) : (
-        <lineBasicMaterial {...lineStyle} />
-      )}
-    </line>
+    <group position={position}>
+      <line ref={lineRef}>
+        <bufferGeometry />
+        {dashed ? (
+          <lineDashedMaterial {...lineStyle} />
+        ) : (
+          <lineBasicMaterial {...lineStyle} />
+        )}
+      </line>
+    </group>
   );
 };
 
