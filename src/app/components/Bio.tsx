@@ -16,7 +16,7 @@ const Bio = () => {
           frameworks and libraries such as React, Angular, Node.js, Django, and
           Ruby on Rails.
         </div>
-        <div className="flex gap-2 mt-5">
+        <div className="flex gap-2 mt-20">
           <Highlight className="text-5xl">View My Resume</Highlight>
           <Image src={linkIcon} alt="export-icon" />
         </div>
