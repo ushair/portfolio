@@ -60,11 +60,11 @@ const Earth = () => {
   }, []);
 
   return (
-    <div className="absolute z-[-1] top-1/4 left-2/3">
+    <div className="absolute z-[-1] top-1/3 left-[60%]">
       <Globe
         ref={ref}
-        width={size.width / 2}
-        height={size.height / 2}
+        width={size.width / 1.5}
+        height={size.height / 1.5}
         backgroundColor="#0E1115"
         globeImageUrl="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg"
         htmlElementsData={[Location]}
