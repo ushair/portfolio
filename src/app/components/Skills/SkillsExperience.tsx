@@ -39,7 +39,6 @@ const SkillsExperience = (props: Props) => {
       <ambientLight intensity={0.2} />
       <spotLight
         angle={0.06}
-        shadowBias={-0.0001}
         intensity={2}
         position={[2, 0, 40]}
         color="#12A2FF"
