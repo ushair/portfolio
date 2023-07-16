@@ -15,6 +15,7 @@ const Skills = (props: Props) => {
             <SkillsExperience />
           </Suspense>
         </Canvas>
+        <Loader />
       </div>
     </div>
   );
