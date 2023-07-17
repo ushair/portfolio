@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Highlight from "./Highlight";
+import Highlight from "../Highlight";
 import Room3D from "./Room3D";
 import linkIcon from "@public/export.svg";
 

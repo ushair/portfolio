@@ -1,6 +1,6 @@
 import { Center, Text3D, FontData } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import font from "../lib/fonts/Windsong.json";
+import font from "../../lib/fonts/Windsong.json";
 import React from "react";
 
 const HeaderNav: React.FC = () => {

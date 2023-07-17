@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Highlight from "./Highlight";
+import Highlight from "../Highlight";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
 import arrowIcon from "@public/arrow-circle-right-gradient.svg";

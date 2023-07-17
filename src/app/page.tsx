@@ -1,10 +1,23 @@
-import Bio from "./components/Bio";
-import Contact from "./components/Contact";
-import Experience from "./components/Experience";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills/Skills";
+import dynamic from "next/dynamic";
+const Bio = dynamic(() => import("./components/Bio/Bio"), { ssr: false });
+const Contact = dynamic(() => import("./components/Contact/Contact"), {
+  ssr: false,
+});
+const Experience = dynamic(() => import("./components/Experience/Experience"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("./components/Footer/Footer"), {
+  ssr: false,
+});
+const Header = dynamic(() => import("./components/Header/Header"), {
+  ssr: false,
+});
+const Projects = dynamic(() => import("./components/Header/Projects"), {
+  ssr: false,
+});
+const Skills = dynamic(() => import("./components/Skills/Skills"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
