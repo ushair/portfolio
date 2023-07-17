@@ -1,7 +1,8 @@
 //@ts-nocheck
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useWindowSize } from "usehooks-ts";
+
 let Globe = () => null;
 if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
 type LocationType = {
@@ -13,39 +14,37 @@ const Location: LocationType = {
   lng: 72.9788995,
 };
 
+const MapPointerSVG = `
+  <svg
+    fill="#11e8bd"
+    version="1.1"
+    id="Capa_1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="24px"
+    height="24px"
+    viewBox="0 0 336.64 336.64"
+    xml:space="preserve"
+    stroke="#11e8bd"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke="#CCCCCC"
+      stroke-width="1.3465719999999999"
+    />
+
+    <g id="SVGRepo_iconCarrier">
+      <g>
+        <path d="M157.618,327.478c5.908,12.226,15.501,12.22,21.397-0.012c25.299-52.481,86.896-180.42,88.812-185.743l0.324-0.886 c3.837-10.959,6.028-22.689,6.028-34.969C274.18,47.411,226.79,0,168.331,0C109.859,0,62.463,47.402,62.463,105.868 c0,8.656,1.156,17.021,3.113,25.076l0.108,0.447C68.393,142.269,131.86,274.167,157.618,327.478z M168.336,46.162 c32.969,0,59.691,26.751,59.691,59.712c0,32.981-26.728,59.705-59.691,59.705c-32.984,0-59.711-26.73-59.711-59.705 C108.631,72.913,135.352,46.162,168.336,46.162z" />{" "}
+      </g>
+    </g>
+  </svg>`;
 const Earth = () => {
   const ref = useRef();
-  const [mapPointer] = useState(`
-    <svg
-      fill="#11e8bd"
-      version="1.1"
-      id="Capa_1"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="24px"
-      height="24px"
-      viewBox="0 0 336.64 336.64"
-      xml:space="preserve"
-      stroke="#11e8bd"
-    >
-      <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-      <g
-        id="SVGRepo_tracerCarrier"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke="#CCCCCC"
-        stroke-width="1.3465719999999999"
-      />
-
-      <g id="SVGRepo_iconCarrier">
-        {" "}
-        <g>
-          {" "}
-          <path d="M157.618,327.478c5.908,12.226,15.501,12.22,21.397-0.012c25.299-52.481,86.896-180.42,88.812-185.743l0.324-0.886 c3.837-10.959,6.028-22.689,6.028-34.969C274.18,47.411,226.79,0,168.331,0C109.859,0,62.463,47.402,62.463,105.868 c0,8.656,1.156,17.021,3.113,25.076l0.108,0.447C68.393,142.269,131.86,274.167,157.618,327.478z M168.336,46.162 c32.969,0,59.691,26.751,59.691,59.712c0,32.981-26.728,59.705-59.691,59.705c-32.984,0-59.711-26.73-59.711-59.705 C108.631,72.913,135.352,46.162,168.336,46.162z" />{" "}
-        </g>{" "}
-      </g>
-    </svg>`);
   const size = useWindowSize();
 
   useEffect(() => {
@@ -70,10 +69,9 @@ const Earth = () => {
         htmlElementsData={[Location]}
         htmlElement={(d: any) => {
           const el: HTMLElement = document.createElement("div");
-          el.innerHTML = mapPointer;
+          el.innerHTML = MapPointerSVG;
           el.style["pointerEvents"] = "auto";
           el.style.cursor = "pointer";
-          el.onclick = () => console.info(d);
           return el;
         }}
       />
