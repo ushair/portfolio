@@ -19,11 +19,9 @@ const Experience = (props: ExperienceProps) => {
               title="Developer"
               company="Finclusion Solutions"
               descriptions={[
-                `Worked on SmartCovr an insurance SAAS platform using React, Redux,
-            material UI, JSON Schema Form for dynamic forms.`,
-                `Worked on backend development creating API's and managing mongoDb.`,
-                `Currently working on the Agent Dashboard using React, Redux
-              Toolkit, React Hook Form, Tailwind, and Keycloak.`,
+                "Worked on SmartCovr, an insurance SAAS platform using React, Redux, Material UI, JSON Schema Form for dynamic forms.",
+                "Worked on backend development, creating APIs, and managing MongoDB.",
+                "Currently working on the Agent Dashboard using React, Redux Toolkit, React Hook Form, Tailwind, and Keycloak.",
               ]}
               direction="left"
               icon={finclusionIcon}
