@@ -1,5 +1,5 @@
 import React from "react";
-import Project from "../Projects/Project";
+import Project from "./Project";
 
 type Props = {};
 

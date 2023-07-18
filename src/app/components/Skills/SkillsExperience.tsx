@@ -36,7 +36,7 @@ const SkillsExperience = (props: Props) => {
   return (
     <>
       <directionalLight position={[-5, -2, 5]} intensity={0.8} />
-      <ambientLight intensity={0.2} />
+      <ambientLight intensity={0.1} />
       <spotLight
         angle={0.06}
         intensity={2}

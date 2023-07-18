@@ -5,7 +5,7 @@ const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function Room3D() {
   const onLoad = (spline: any) => {
-    spline.setZoom(1);
+    spline.setZoom(0.7);
   };
 
   return (
