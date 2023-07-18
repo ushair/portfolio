@@ -38,7 +38,7 @@ const Contact = () => {
     );
   };
   return (
-    <div className="w-full mt-36">
+    <div id="contact" className="w-full mt-36">
       <div className="container relative ml-20 mt-28">
         <Earth />
         <h1 className="text-6xl">Let&#39;s get in Touch!</h1>

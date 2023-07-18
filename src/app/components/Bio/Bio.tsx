@@ -6,7 +6,7 @@ import linkIcon from "@public/export.svg";
 
 const Bio = () => {
   return (
-    <div className="w-full">
+    <div id="about" className="w-full">
       <div className="container flex flex-col items-center">
         <Bio3D />
         <div className="w-4/5 text-4xl leading-[3.75rem]">

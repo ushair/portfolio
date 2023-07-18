@@ -6,7 +6,7 @@ type ExperienceProps = {};
 
 const Experience = (props: ExperienceProps) => {
   return (
-    <div className="w-full">
+    <div id="experience" className="w-full">
       <div className="container flex flex-col items-center gap-16 mt-10">
         <h1 className="text-6xl">My Work Experience</h1>
         {/* experience-container */}

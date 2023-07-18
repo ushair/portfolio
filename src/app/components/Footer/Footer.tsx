@@ -26,10 +26,10 @@ const Footer = (props: Props) => {
           </a>
         </div>
         <div className="flex items-center justify-center w-full text-2xl gap-11">
-          <a href="#">About</a>
-          <a href="#">Skills</a>
-          <a href="#">Experience</a>
-          <a href="#">Projects</a>
+          <a href="#about">About</a>
+          <a href="#skill">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#project">Projects</a>
         </div>
         <div className="flex items-end justify-center opacity-30 grow">
           © Ushair Ansari. All Rights Reserved.

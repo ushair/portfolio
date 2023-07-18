@@ -27,18 +27,20 @@ const HeaderNav: React.FC = () => {
           </Center>
         </Canvas>
       </div>
-      <div className="flex gap-6 ml-12 text-lg">
-        <a>About</a>
-        <a>Skills</a>
-        <a>Experiences</a>
-        <a>Projects</a>
+      <div className="flex gap-8 ml-12 text-lg">
+        <a href="#about">About</a>
+        <a href="#skill">Skills</a>
+        <a href="#experience">Experiences</a>
+        <a href="#project">Projects</a>
       </div>
       <div className="relative flex justify-end flex-1">
         <button
           type="button"
           className="p-0.5 bg-gradient-to-r from-blueOne via-blueTwo to-blueThree rounded-xl"
         >
-          <div className="px-3 py-1 bg-black rounded-xl">Contact</div>
+          <div className="px-3 py-1 bg-black rounded-xl">
+            <a href="#contact">Contact</a>
+          </div>
         </button>
       </div>
     </div>
