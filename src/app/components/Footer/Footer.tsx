@@ -12,16 +12,32 @@ const Footer = (props: Props) => {
     <div className="w-full footer h-80">
       <div className="container flex flex-col h-full gap-20 pb-2 pt-14 ">
         <div className="flex items-center justify-center w-full gap-11">
-          <a href="#">
+          <a
+            href="https://github.com/ushair"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={githubIcon} alt="github" />
           </a>
-          <a href="#">
+          <a
+            href="https://linkedin.com/in/ushair"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={linkedinIcon} alt="linkedin" />
           </a>
-          <a href="#">
+          <a
+            href="https://instagram.com/ushair"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={instagramIcon} alt="instagram" />
           </a>
-          <a href="#">
+          <a
+            href="https://twitter.com/usha1r"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image src={twitterIcon} alt="twitter" />
           </a>
         </div>
