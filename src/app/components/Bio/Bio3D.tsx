@@ -5,7 +5,7 @@ const LazySpline = React.lazy(() => import("@splinetool/react-spline"));
 
 export default function Room3D() {
   const onLoad = (spline: any) => {
-    spline.setZoom(0.7);
+    spline.setZoom(2);
   };
 
   return (
@@ -13,7 +13,7 @@ export default function Room3D() {
       <Suspense fallback={<FallbackSpinner />}>
         <LazySpline
           onLoad={onLoad}
-          scene="https://prod.spline.design/ncnBODkFyKlo6ZK6/scene.splinecode"
+          scene="https://prod.spline.design/sTBGz6CTjhLZZvYH/scene.splinecode"
         />
       </Suspense>
     </div>

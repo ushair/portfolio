@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 import Highlight from "../Highlight";
-import Room3D from "./Room3D";
+import Bio3D from "./Bio3D";
 import linkIcon from "@public/export.svg";
 
 const Bio = () => {
   return (
     <div className="w-full">
       <div className="container flex flex-col items-center">
-        <Room3D />
+        <Bio3D />
         <div className="w-4/5 text-4xl leading-[3.75rem]">
           As a full stack developer, I am proficient in a wide range of
           programming languages, including but not limited to HTML, CSS,
