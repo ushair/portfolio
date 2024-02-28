@@ -8,6 +8,7 @@ type Props = {
   technologies: string[];
   imageUrl: string;
   gifUrl: string;
+  projectUrl: string;
 };
 
 const Project: React.FC<Props> = ({
@@ -16,6 +17,7 @@ const Project: React.FC<Props> = ({
   technologies,
   imageUrl,
   gifUrl,
+  projectUrl,
 }) => {
   return (
     <div className="group min-w-[30rem] p-8 border bg-[#404040] bg-opacity-10 border-green-500 border-opacity-10 rounded-2xl mb-2">
@@ -40,7 +42,9 @@ const Project: React.FC<Props> = ({
           ))}
         </div>
         <div className="">
-          <Image width={20} src={linkIcon} alt="icon" />
+          <a href={projectUrl} target="_blank">
+            <Image width={20} src={linkIcon} alt="icon" />
+          </a>
         </div>
       </div>
     </div>

@@ -21,6 +21,7 @@ const Projects = (props: Props) => {
             technologies={["React", "Redux", "SASS", "Node.js", "Material UI"]}
             imageUrl="/smartcovr_default.png"
             gifUrl="/smartCovr.gif"
+            projectUrl="https://uat.smartcovr.io/#/"
           />
           <Project
             title="Agent Dashboard"
@@ -31,6 +32,7 @@ const Projects = (props: Props) => {
             technologies={["React", "Redux Toolkit", "Tailwind", "Material UI"]}
             imageUrl="/agent_default.png"
             gifUrl="/agent.gif"
+            projectUrl="https://lifegeneral.smartcovr.io/"
           />
           <Project
             title="Spoach"
@@ -41,6 +43,7 @@ const Projects = (props: Props) => {
             technologies={["Flutter", "Python", "Tensorflow", "OpenCv"]}
             imageUrl="/spoach_default.png"
             gifUrl="/spoach_default.png"
+            projectUrl="https://github.com/ushair/SPOACH"
           />
           <Project
             title="Sunnah"
@@ -50,6 +53,7 @@ const Projects = (props: Props) => {
             technologies={["Android Development Tools (ADT)", "SQLite"]}
             imageUrl="/sunnah_default.jpg"
             gifUrl="/sunnah.gif"
+            projectUrl="https://github.com/ushair/Sunnah"
           />
         </div>
       </div>
