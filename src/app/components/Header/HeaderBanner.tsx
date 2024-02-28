@@ -8,8 +8,10 @@ const HeaderBanner = () => {
           Hello 👋 my name <br /> is <Highlight>Ushair Ansari</Highlight>
         </h1>
         <p className="w-4/5 text-2xl">
-          I am a full stack developer. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          A dedicated full-stack developer with a passion for creating seamless
+          web and mobile experiences. With expertise in React. I excel at
+          transforming innovative ideas into reality through code. Let&apos;s
+          collaborate and build something truly remarkable together!
         </p>
       </div>
     </div>

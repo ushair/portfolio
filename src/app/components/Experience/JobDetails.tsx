@@ -34,7 +34,7 @@ const JobDetails = ({
       <div
         className={`right-[calc(-25vw-1.5rem)] absolute top-18 z-30 text-4xl pl-4 w-[25vw] rounded-3xl`}
       >
-        June 2021 - Present
+        June 2021 - Dec 2023
       </div>
     </div>
   );

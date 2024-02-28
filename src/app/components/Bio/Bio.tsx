@@ -6,18 +6,20 @@ import linkIcon from "@public/export.svg";
 
 const Bio = () => {
   return (
-    <div id="about" className="w-full">
+    <div id="about" className="w-full mt-20">
       <div className="container flex flex-col items-center">
-        <Bio3D />
+        {/* <Bio3D /> */}
         <div className="w-4/5 text-4xl leading-[3.75rem] mb-20">
-          As a full stack developer, I am proficient in a wide range of
-          programming languages, including but not limited to HTML, CSS,
-          JavaScript, Python, and Ruby. I have hands-on experience with various
-          frameworks and libraries such as React, Angular, Node.js, Django, and
-          Ruby on Rails.
+          As a seasoned full-stack developer, I possess proficiency across a
+          diverse spectrum of programming languages, encompassing HTML, CSS,
+          JavaScript and Typescript among others. My expertise extends to an
+          array of frameworks and libraries, including React, Node.js, and React
+          Native. With hands-on experience in these technologies, I am adept at
+          crafting robust and scalable solutions that meet the demands of modern
+          web and mobile applications.
         </div>
         <a
-          href="https://drive.google.com/uc?export=download&id=1soyiXs2GeMlk-PkwC0Qmf4CKG8UwujiL"
+          href="https://drive.google.com/file/d/1YzVCQSWGXvCexhfIi6baQBkJOnH8xvWJ/view?usp=drive_link"
           download
         >
           <div className="flex gap-2">

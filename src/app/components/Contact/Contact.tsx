@@ -40,7 +40,7 @@ const Contact = () => {
   return (
     <div id="contact" className="w-full mt-36">
       <div className="container relative ml-20 mt-28">
-        <Earth />
+        {/* <Earth /> */}
         <h1 className="text-6xl">Let&#39;s get in Touch!</h1>
         <div className="mt-10 text-2xl">I&#39;m interested in</div>
         <div className="flex gap-4 mt-7">
