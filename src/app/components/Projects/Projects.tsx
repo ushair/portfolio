@@ -35,6 +35,16 @@ const Projects = (props: Props) => {
             projectUrl="https://lifegeneral.smartcovr.io/"
           />
           <Project
+            title="Airbnb-Clone"
+            description="This project is a React Native Expo application that aims to replicate the Airbnb user interface.
+            It's features are Search for listings, View detailed information about listings, Filter listings based on various criteria
+            Book listings"
+            technologies={["React-Native", "Expo", "Typescript", "Reanimated"]}
+            imageUrl="/airbnb_default.jpeg"
+            gifUrl="/airbnb_default.jpeg"
+            projectUrl="https://github.com/ushair/airbnb-clone"
+          />
+          <Project
             title="Spoach"
             description="Implemented a real-time human activity recognition system capable of tracking movements. Developed a skill 
             assessment feature, categorizing skills from beginner to expert in various sports via video
