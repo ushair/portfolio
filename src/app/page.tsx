@@ -1,3 +1,4 @@
+"use client";
 import dynamic from "next/dynamic";
 import Projects from "./components/Projects/Projects";
 import Header from "./components/Header/Header";
