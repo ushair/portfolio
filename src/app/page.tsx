@@ -19,8 +19,11 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <Header />
-      <Bio />
-      <Skills />
+      <div className="relative">
+        <div className="shared-glow" />
+        <Bio />
+        <Skills />
+      </div>
       <Experience />
       <Projects />
       <Contact />

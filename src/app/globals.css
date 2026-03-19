@@ -225,8 +225,8 @@ body {
   min-height: calc(100vh - 50px);
 }
 .header-background {
-    clip-path: url(#my-clip-path);
-    filter:blur(100px);
+  clip-path: url(#my-clip-path);
+  filter: blur(100px);
 }
 
 .job::before {
@@ -261,11 +261,59 @@ body {
 }
 
 .container {
- max-width: 1400px;
- width: 100%;
- margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer {
   background: linear-gradient(to top, black 70%, transparent);
+}
+
+.skill-bg-blur {
+  position: absolute;
+  width: 826px;
+  height: 826px;
+  top: 35%;
+  left: 20%;
+  transform: translate(-50%, -20%);
+  background: #12a2ff;
+  opacity: 0.2;
+  filter: blur(330px);
+  border-radius: 50%;
+  z-index: -2;
+  animation: floatGlow 8s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+@keyframes floatGlow {
+  0% {
+    transform: translate(-50%, -20%) scale(1);
+  }
+  50% {
+    transform: translate(-48%, -22%) scale(1.05);
+  }
+  100% {
+    transform: translate(-50%, -20%) scale(1);
+  }
+}
+
+.shared-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 1000px;
+  height: 1000px;
+
+  background: radial-gradient(
+    circle,
+    rgba(18, 162, 255, 0.25) 0%,
+    rgba(18, 162, 255, 0.1) 40%,
+    transparent 70%
+  );
+
+  filter: blur(200px);
+  pointer-events: none;
+  z-index: 0;
 }

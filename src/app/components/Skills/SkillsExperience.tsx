@@ -2,6 +2,8 @@ import React from "react";
 import CircleHalf from "./CircleHalf";
 import { useTexture, Center } from "@react-three/drei";
 import SkillIcon from "./SkillIcon";
+import { useThree } from "@react-three/fiber";
+import { useEffect } from "react";
 
 type Props = {};
 
@@ -33,6 +35,18 @@ const SkillsExperience = (props: Props) => {
     "/redux.png",
     "/tailwind.png",
   ]);
+  const { camera, size } = useThree();
+
+  useEffect(() => {
+    if (size.width < 640) {
+      camera.position.set(0, 0, 10); // zoom out on mobile
+    } else if (size.width < 1024) {
+      camera.position.set(0, 0, 8);
+    } else {
+      camera.position.set(0, 0, 7);
+    }
+  }, [size, camera]);
+
   return (
     <>
       <directionalLight position={[-5, -2, 5]} intensity={0.8} />

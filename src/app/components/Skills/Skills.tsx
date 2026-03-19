@@ -1,22 +1,33 @@
 "use client";
-import React, { Suspense } from "react";
-import { Loader } from "@react-three/drei";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import SkillsExperience from "./SkillsExperience";
+import {
+  EffectComposer,
+  Bloom,
+  Vignette,
+  Noise,
+} from "@react-three/postprocessing";
 
 type Props = {};
 
 const Skills = (props: Props) => {
   return (
-    <div id="skill" className="w-full">
-      <div className="container h-[900px] relative -top-56 z-[-1]">
+    <div id="skill" className="relative w-full">
+      <div className="skill-bg-blur" />
+
+      <div className="container relative z-10 h-[60vh] md:h-[80vh] lg:h-[900px]">
         <Canvas camera={{ position: [0, 0, 7] }} shadows>
           <Suspense fallback={null}>
             <SkillsExperience />
+            <EffectComposer>
+              <Bloom intensity={1.2} luminanceThreshold={0.15} mipmapBlur />
+              <Vignette offset={0.1} darkness={1.2} />
+              <Noise opacity={0.02} />
+            </EffectComposer>
           </Suspense>
         </Canvas>
-        <Loader />
-        <div className="absolute inset-0 flex items-center justify-center text-center -top-24 text-7xl">
+        <div className="absolute inset-0 flex items-center justify-center text-3xl text-center -top-24 sm:text-5xl md:text-6xl lg:text-7xl">
           Some of <br />
           my skills
         </div>
