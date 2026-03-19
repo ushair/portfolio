@@ -224,9 +224,19 @@ body {
 .header {
   min-height: calc(100vh - 50px);
 }
+
+/* Desktop: use the laptop clip path */
 .header-background {
-  clip-path: url(#my-clip-path);
+  clip-path: url(#clip-desktop);
   filter: blur(100px);
+}
+
+/* Mobile: switch to the mobile clip path */
+@media (max-width: 768px) {
+  .header-background {
+    clip-path: url(#clip-mobile);
+    filter: blur(100px);
+  }
 }
 
 .job::before {

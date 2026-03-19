@@ -57,7 +57,7 @@ const Bio = () => {
         <a
           href="https://drive.google.com/file/d/1YzVCQSWGXvCexhfIi6baQBkJOnH8xvWJ/view"
           target="_blank"
-          className="z-50 mb-8"
+          className="z-20 mb-8"
         >
           <div className="flex items-center gap-2 cursor-pointer">
             <Highlight className="text-2xl md:text-5xl">

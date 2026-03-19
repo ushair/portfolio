@@ -6,7 +6,7 @@ import HeaderBg from "./HeaderBg";
 
 const Header: React.FC = () => {
   return (
-    <header className="container relative flex flex-col header">
+    <header className="container relative flex flex-col gap-6 md:gap-0 header">
       <HeaderBg />
       <HeaderNav />
       <HeaderBanner />
