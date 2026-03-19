@@ -18,6 +18,8 @@
     "@types/react-dom": "19.2.3",
     "@types/three": "^0.183.1",
     "autoprefixer": "10.4.27",
+    "embla-carousel-auto-scroll": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "next": "^16.1.7",
     "postcss": "8.5.8",
     "postprocessing": "^6.38.3",

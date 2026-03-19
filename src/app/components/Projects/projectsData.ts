@@ -1,0 +1,48 @@
+export const projectsData = [
+  {
+    title: "Smartcovr",
+    description: `Developed a cutting-edge insurance portal offering a Software as a Service (SAAS) solution for term, annuity, health, bike, and car insurance. Empowered customers with a personalized and comprehensive coverage experience by tailoring insurance offerings to their needs. Implemented a flexible payment system, enabling users to choose from various payment plans suited to their financial preferences.`,
+    technologies: ["React", "Redux", "SASS", "Node.js", "Material UI"],
+    imageUrl: "/smartcovr_default.png",
+    gifUrl: "/smartCovr.gif",
+    projectUrl: "https://uat.smartcovr.io/#/",
+  },
+  {
+    title: "Agent Dashboard",
+    description: `Developed Agent Dashboard as a key component within the SmartCovr platform, enhancing user experience and facilitating effective management of insurance-related tasks for agents. Utilized advanced technologies including React, Redux Toolkit, React Hook Form, Tailwind, and Keycloak to achieve a seamless and efficient user interface.`,
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "React Hook Form",
+      "Tailwind",
+      "Material UI",
+    ],
+    imageUrl: "/agent_default.png",
+    gifUrl: "/agent.gif",
+    projectUrl: "https://lifegeneral.smartcovr.io/",
+  },
+  {
+    title: "Airbnb Clone",
+    description: `A React Native Expo application replicating the Airbnb user interface. Features include searching listings, viewing detailed property information, filtering listings based on various criteria, and booking functionality.`,
+    technologies: ["React Native", "Expo", "TypeScript", "Reanimated"],
+    imageUrl: "/airbnb_default.jpeg",
+    gifUrl: "/airbnb_default.jpeg",
+    projectUrl: "https://github.com/ushair/airbnb-clone",
+  },
+  {
+    title: "Spoach",
+    description: `Implemented a real-time human activity recognition system capable of tracking movements. Developed a skill assessment feature that categorizes user skills from beginner to expert using video analysis. Provides real-time feedback without requiring physical coaching.`,
+    technologies: ["Flutter", "Python", "TensorFlow", "OpenCV"],
+    imageUrl: "/spoach_default.png",
+    gifUrl: "/spoach_default.png",
+    projectUrl: "https://github.com/ushair/SPOACH",
+  },
+  {
+    title: "Sunnah",
+    description: `Designed an offline-capable application for Qibla direction and prayer times without requiring internet access. Includes compass-based direction detection, Islamic content like ayat, dua, sura, and daily Hadiths.`,
+    technologies: ["Android (ADT)", "SQLite"],
+    imageUrl: "/sunnah_default.jpg",
+    gifUrl: "/sunnah.gif",
+    projectUrl: "https://github.com/ushair/Sunnah",
+  },
+];

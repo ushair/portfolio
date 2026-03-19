@@ -1,70 +1,50 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
+import { projectsData } from "./projectsData";
 import Project from "./Project";
 
-type Props = {};
+const Projects = () => {
+  const autoScroll = useRef(
+    AutoScroll({
+      speed: 1, // 🔥 adjust (0.5 = slow, 2 = fast)
+      stopOnInteraction: false,
+      stopOnMouseEnter: true, // 👈 pause on hover
+    }),
+  );
 
-const Projects = (props: Props) => {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      dragFree: true,
+    },
+    [autoScroll.current],
+  );
+
   return (
     <div id="project" className="w-full mt-36">
-      <div className="container ml-20 mt-28">
-        <h1 className="text-6xl">Projects</h1>
-        {/* container */}
-        <div className="flex mt-10 pr-8 overflow-scroll overflow-y-hidden gap-7 w-[calc(100vw-(100vw-92%)/2)]">
-          <Project
-            title="Smartcovr"
-            description="Developed a cutting-edge insurance portal offering a Software as a
-            Service (SAAS) solution for term, annuity, health, bike, and car
-            insurance.Empowered customers with a personalized and comprehensive
-            coverage experience by tailoring insurance offerings to their needs.
-            Implemented a flexible payment system, enabling users to choose from
-            various payment plans suited to their financial preferences."
-            technologies={["React", "Redux", "SASS", "Node.js", "Material UI"]}
-            imageUrl="/smartcovr_default.png"
-            gifUrl="/smartCovr.gif"
-            projectUrl="https://uat.smartcovr.io/#/"
-          />
-          <Project
-            title="Agent Dashboard"
-            description="Developed Agent Dashboard as a key component within the SmartCovr platform, enhancing user experience
-            and facilitating effective management of insurance-related tasks for agents.
-            • Utilized advanced technologies including React, Redux Toolkit, React Hook Form, Tailwind, and Keycloak to
-            achieve a seamless and efficient user interface."
-            technologies={["React", "Redux Toolkit", "Tailwind", "Material UI"]}
-            imageUrl="/agent_default.png"
-            gifUrl="/agent.gif"
-            projectUrl="https://lifegeneral.smartcovr.io/"
-          />
-          <Project
-            title="Airbnb-Clone"
-            description="This project is a React Native Expo application that aims to replicate the Airbnb user interface.
-            It's features are Search for listings, View detailed information about listings, Filter listings based on various criteria
-            Book listings"
-            technologies={["React-Native", "Expo", "Typescript", "Reanimated"]}
-            imageUrl="/airbnb_default.jpeg"
-            gifUrl="/airbnb_default.jpeg"
-            projectUrl="https://github.com/ushair/airbnb-clone"
-          />
-          <Project
-            title="Spoach"
-            description="Implemented a real-time human activity recognition system capable of tracking movements. Developed a skill 
-            assessment feature, categorizing skills from beginner to expert in various sports via video
-            analysis.Enabled users to perform skills before their camera, providing accurate feedback without the need for costly
-            coaching or academy visits."
-            technologies={["Flutter", "Python", "Tensorflow", "OpenCv"]}
-            imageUrl="/spoach_default.png"
-            gifUrl="/spoach_default.png"
-            projectUrl="https://github.com/ushair/SPOACH"
-          />
-          <Project
-            title="Sunnah"
-            description="Designed an offline-capable application for Qibla and Prayer Times, eliminating the need for an internet connection.
-            Incorporated a compass feature for accurate prayer direction and adherence to Islamic rules during Salat.
-            Provided access to ayat, dua, and sura in English and Arabic, along with daily Hadiths of Prophet Muhammad (SAW)."
-            technologies={["Android Development Tools (ADT)", "SQLite"]}
-            imageUrl="/sunnah_default.jpg"
-            gifUrl="/sunnah.gif"
-            projectUrl="https://github.com/ushair/Sunnah"
-          />
+      <div className="container mx-auto mt-28">
+        <h1 className="px-4 text-4xl md:text-6xl">Projects</h1>
+
+        {/* 🌊 Carousel Wrapper */}
+        <div className="relative mt-10">
+          <div className="absolute top-0 left-0 z-10 w-12 h-full bg-gradient-to-r from-black via-black/60 to-transparent" />
+          <div className="absolute top-0 right-0 z-10 w-12 h-full bg-gradient-to-l from-black via-black/60 to-transparent" />
+          {/* Embla */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6 px-6">
+              {projectsData.map((project, index) => (
+                <div
+                  key={index}
+                  className="flex-[0_0_85%] sm:flex-[0_0_60%] md:flex-[0_0_40%]"
+                >
+                  <Project {...project} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
