@@ -3,13 +3,21 @@
 import Image from "next/image";
 import Highlight from "../Highlight";
 import linkIcon from "@public/export.svg";
-import { Canvas } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
-import { Suspense, useEffect, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Environment, useGLTF } from "@react-three/drei";
+import { Suspense, useEffect, useRef, useState } from "react";
 
 function Model() {
   const { scene } = useGLTF("/f1mercedes.glb");
-  return <primitive object={scene} scale={3} />;
+  const ref = useRef<any>(null);
+
+  useFrame(() => {
+    if (ref.current) {
+      ref.current.rotation.y += 0.003;
+    }
+  });
+
+  return <primitive ref={ref} object={scene} scale={3} />;
 }
 
 const Bio = () => {
@@ -34,13 +42,24 @@ const Bio = () => {
           <Canvas
             camera={{
               position: isMobile ? [-10, 3, 1] : [-15, 4, 1],
-              zoom: isMobile ? 1.8 : 2.5,
+              fov: isMobile ? 50 : 40,
             }}
             shadows
+            dpr={[1, 1.5]}
           >
             <Suspense fallback={null}>
-              <ambientLight intensity={1} />
-              <directionalLight position={[7, 4, 0.5]} intensity={1} />
+              <ambientLight intensity={0.4} />
+              <Environment preset="city" />
+              <directionalLight position={[5, 5, 5]} intensity={1.2} />
+
+              <directionalLight position={[-5, 2, -5]} intensity={0.6} />
+
+              <spotLight
+                position={[0, 5, 5]}
+                angle={0.3}
+                intensity={1.5}
+                penumbra={1}
+              />
               <Model />
             </Suspense>
           </Canvas>

@@ -7,6 +7,7 @@ type JobProps = {
   descriptions: string[];
   direction: string;
   icon: any;
+  duration: string;
 };
 
 const JobDetails = ({
@@ -15,10 +16,16 @@ const JobDetails = ({
   descriptions,
   direction,
   icon,
+  duration,
 }: JobProps) => {
+  const durationDirectionClass =
+    direction === "right"
+      ? "left-[calc(-25vw-1.5rem)]"
+      : "right-[calc(-25vw-1.5rem)]";
+
   return (
-    <div className="relative flex items-center justify-center w-full border-2 border-white rounded-full h-28">
-      <Image src={icon} width={60} alt="finclusion" />
+    <div className="relative flex items-center justify-center border-2 border-white rounded-full w-14 md:w-28 md:h-28 h-14">
+      <Image src={icon} alt="companyIcon  " className="w-8 md:w-16" />
       {/* job details */}
       <div
         className={`job ${direction} -top-24 absolute bg-gradient-to-r from-blueOne via-blueTwo to-blueThree w-[30vw] z-30 px-10 py-8 rounded-3xl h-[26.563rem]`}
@@ -32,9 +39,9 @@ const JobDetails = ({
         </ul>
       </div>
       <div
-        className={`right-[calc(-25vw-1.5rem)] absolute top-18 z-30 text-4xl pl-4 w-[25vw] rounded-3xl`}
+        className={`${durationDirectionClass} absolute top-18 z-30 text-4xl pl-4 w-[25vw] rounded-3xl`}
       >
-        June 2021 - Dec 2023
+        {duration}
       </div>
     </div>
   );

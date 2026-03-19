@@ -43,6 +43,7 @@ const MapPointerSVG = `
       </g>
     </g>
   </svg>`;
+
 const Earth = () => {
   const ref = useRef();
   const size = useWindowSize();
@@ -59,7 +60,7 @@ const Earth = () => {
   }, []);
 
   return (
-    <div className="absolute z-[-1] top-1/3 left-[60%]">
+    <div className="absolute z-[-1] top-1/3 left-[60%] hidden md:block">
       <Globe
         ref={ref}
         width={size.width / 1.5}

@@ -38,64 +38,78 @@ const Contact = () => {
     );
   };
   return (
-    <div id="contact" className="w-full mt-36">
-      <div className="container relative ml-20 mt-28">
+    <div id="contact" className="w-full py-16 md:py-24">
+      <div className="max-w-[1400px] mx-auto px-4 md:px-8 relative">
+        {/* 🌍 Earth */}
         <Earth />
-        <h1 className="text-6xl">Let&#39;s get in Touch!</h1>
-        <div className="mt-10 text-2xl">I&#39;m interested in</div>
-        <div className="flex gap-4 mt-7">
-          {Object.keys(Interests).map((key) => {
-            const interest = Interests[key];
-            return (
-              <div
-                key={key}
-                onClick={() => handleClick(interest)}
-                className={`${
-                  active === interest && selected
-                } cursor-pointer py-2.5 px-5 rounded-full bg-slate-900`}
+
+        <div className="flex flex-col gap-12 md:flex-row md:gap-20">
+          {/* LEFT CONTENT */}
+          <div className="flex-1">
+            <h1 className="text-3xl leading-tight sm:text-5xl md:text-6xl">
+              Let&apos;s get in Touch!
+            </h1>
+
+            <div className="mt-6 text-lg md:text-2xl">
+              I&apos;m interested in
+            </div>
+
+            {/* Chips */}
+            <div className="flex flex-wrap gap-3 mt-5">
+              {Object.values(Interests).map((interest) => (
+                <div
+                  key={interest}
+                  onClick={() => setActive(interest)}
+                  className={`cursor-pointer px-4 py-2 rounded-full text-sm md:text-base transition ${
+                    active === interest
+                      ? "bg-gradient-to-r from-blueOne via-blueTwo to-blueThree text-black"
+                      : "bg-slate-900 hover:bg-slate-800"
+                  }`}
+                >
+                  {interest}
+                </div>
+              ))}
+            </div>
+
+            {/* FORM */}
+            <div className="flex flex-col w-full gap-6 mt-8 md:w-4/5">
+              <input
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="w-full py-3 text-base bg-transparent border-b outline-none md:py-4 md:text-xl border-slate-700"
+                type="text"
+                placeholder="Enter Your Name"
+              />
+
+              <input
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full py-3 text-base bg-transparent border-b outline-none md:py-4 md:text-xl border-slate-700"
+                type="email"
+                placeholder="Enter Your Email"
+              />
+
+              <input
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                className="w-full py-3 text-base bg-transparent border-b outline-none md:py-4 md:text-xl border-slate-700"
+                type="text"
+                placeholder="Tell Me About Your Project"
+              />
+
+              <button
+                onClick={sendEmail}
+                className="self-start mt-4 p-[1px] rounded-2xl bg-gradient-to-r from-blueOne via-blueTwo to-blueThree"
               >
-                {interest}
-              </div>
-            );
-          })}
-        </div>
-        <div className="flex flex-col gap-6 mt-5 form-container">
-          <input
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
-            type="text"
-            placeholder="Enter Your Name"
-            value={formData.name}
-          />
-          <input
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
-            type="email"
-            placeholder="Enter Your Email"
-            value={formData.email}
-          />
-          <input
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            className="w-1/2 py-4 text-2xl bg-transparent border-b border-slate-800 outline-0"
-            type="text"
-            placeholder="Tell Me About Your Project"
-            value={formData.message}
-          />
-          <div className="flex">
-            <button
-              type="button"
-              onClick={sendEmail}
-              className="p-0.5 bg-gradient-to-r from-blueOne via-blueTwo to-blueThree rounded-3xl"
-            >
-              <div className="flex items-center justify-center gap-1 px-12 py-6 bg-slate-900 rounded-3xl">
-                <Highlight className="text-xl">Submit</Highlight>
-                <Image src={arrowIcon} alt="" />
-              </div>
-            </button>
+                <div className="flex items-center gap-2 px-6 py-3 md:px-10 md:py-5 bg-slate-900 rounded-2xl">
+                  <Highlight className="text-base md:text-xl">Submit</Highlight>
+                  <Image src={arrowIcon} alt="" />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
