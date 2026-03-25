@@ -25,7 +25,7 @@ const Skills = (props: Props) => {
         <Canvas
           camera={{ position: [0, 0, 7] }}
           shadows
-          eventSource={containerRef}
+          eventSource={containerRef as React.RefObject<HTMLElement>}
           eventPrefix="client"
         >
           <Suspense fallback={null}>

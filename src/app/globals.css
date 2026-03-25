@@ -304,6 +304,7 @@ body {
   z-index: -2;
   animation: floatGlow 8s ease-in-out infinite;
   mix-blend-mode: screen;
+  pointer-events: none;
 }
 @keyframes floatGlow {
   0% {
