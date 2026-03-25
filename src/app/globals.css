@@ -239,6 +239,16 @@ body {
   }
 }
 
+.job {
+  transition: all 0.4s ease;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.job:hover {
+  transform: translateY(-6px) scale(1.01);
+}
+
 .job::before {
   content: "";
   position: absolute;
