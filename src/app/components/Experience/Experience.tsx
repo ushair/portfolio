@@ -12,7 +12,7 @@ const Experience = (props: ExperienceProps) => {
   return (
     <div id="experience" className="w-full">
       <div className="container flex flex-col items-start gap-16 md:items-center">
-        <h1 className="mt-5 text-4xl font-extrabold text-center sm:text-5xl lg:text-6xl mb-14 sm:mb-20">
+        <h1 className="w-full mt-5 text-4xl font-extrabold text-center sm:text-5xl lg:text-6xl mb-14 sm:mb-20">
           My Work Experience
         </h1>
 

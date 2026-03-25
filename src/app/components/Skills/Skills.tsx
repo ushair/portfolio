@@ -1,5 +1,5 @@
 "use client";
-import { Suspense } from "react";
+import { Suspense, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import SkillsExperience from "./SkillsExperience";
 import {
@@ -12,12 +12,22 @@ import {
 type Props = {};
 
 const Skills = (props: Props) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   return (
     <div id="skill" className="relative w-full">
       <div className="skill-bg-blur" />
 
-      <div className="container relative z-10 h-[60vh] md:h-[80vh] lg:h-[900px]">
-        <Canvas camera={{ position: [0, 0, 7] }} shadows>
+      <div
+        ref={containerRef}
+        className="container relative z-10 h-[60vh] md:h-[80vh] lg:h-[900px]"
+      >
+        <Canvas
+          camera={{ position: [0, 0, 7] }}
+          shadows
+          eventSource={containerRef}
+          eventPrefix="client"
+        >
           <Suspense fallback={null}>
             <SkillsExperience />
             <EffectComposer>

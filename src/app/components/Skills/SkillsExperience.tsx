@@ -39,7 +39,7 @@ const SkillsExperience = (props: Props) => {
 
   useEffect(() => {
     if (size.width < 640) {
-      camera.position.set(0, 0, 10); // zoom out on mobile
+      camera.position.set(0, 0, 10);
     } else if (size.width < 1024) {
       camera.position.set(0, 0, 8);
     } else {
@@ -68,11 +68,13 @@ const SkillsExperience = (props: Props) => {
             />
             <SkillIcon
               texture={nodeDecal}
+              name="Node.js"
               scale={0.5}
               position={[-2.8, 0.5, 0]}
             />
             <SkillIcon
               texture={mongoDecal}
+              name="MongoDB"
               scale={0.5}
               position={[2.8, 0.5, 0]}
             />
@@ -88,16 +90,19 @@ const SkillsExperience = (props: Props) => {
             />
             <SkillIcon
               texture={gitDecal}
+              name="Git"
               scale={0.5}
               position={[2.2, -1.8, 0]}
             />
             <SkillIcon
               texture={threeDecal}
+              name="Three.js"
               scale={0.5}
               position={[0, -2.7, 0]}
             />
             <SkillIcon
               texture={nextjsDecal}
+              name="Next.js"
               scale={0.5}
               position={[-2.2, -1.8, 0]}
             />
@@ -112,11 +117,13 @@ const SkillsExperience = (props: Props) => {
           />
           <SkillIcon
             texture={htmlDecal}
+            name="HTML5"
             scale={0.5}
             position={[-5.2, 0.4, 0]}
           />
           <SkillIcon
             texture={tailwindDecal}
+            name="Tailwind CSS"
             scale={0.5}
             position={[5.2, 0.4, 0]}
           />
@@ -128,26 +135,31 @@ const SkillsExperience = (props: Props) => {
           />
           <SkillIcon
             texture={reduxDecal}
+            name="Redux"
             scale={0.5}
             position={[4.7, -2.3, 0]}
           />
           <SkillIcon
             texture={reactDecal}
+            name="React"
             scale={0.5}
             position={[2.7, -4.3, 0]}
           />
           <SkillIcon
             texture={typescriptDecal}
+            name="TypeScript"
             scale={0.5}
             position={[-0.05, -4.7, 0]}
           />
           <SkillIcon
             texture={javascriptDecal}
+            name="JavaScript"
             scale={0.5}
             position={[-2.8, -4.1, 0]}
           />
           <SkillIcon
             texture={cssDecal}
+            name="CSS3"
             scale={0.5}
             position={[-4.7, -2.2, 0]}
           />
